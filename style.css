@@ -1,0 +1,521 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --background-color: #1a1a1a;
+    --card-background: #2d2d2d;
+    --text-color: #ecf0f1;
+    --tag-color: #3498db;
+    --quote-color: #9b59b6;
+    --football-color: #27ae60;
+    --snitch-color: #e67e22;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #bdc3c7;
+}
+
+.character-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card h2 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.age {
+    color: #95a5a6;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.characteristics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    background-color: var(--tag-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* Cytaty */
+.quotes-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.quotes-section h2 {
+    color: var(--quote-color);
+    margin-bottom: 1.5rem;
+}
+
+.quotes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.quote-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border-left: 4px solid var(--quote-color);
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
+
+.quote-author {
+    text-align: right;
+    color: var(--quote-color);
+    font-weight: bold;
+}
+
+#new-quotes {
+    background-color: var(--quote-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#new-quotes:hover {
+    background-color: #8e44ad;
+}
+
+/* Football Rivals */
+.football-rivals {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.football-rivals h2 {
+    color: var(--football-color);
+    margin-bottom: 1.5rem;
+}
+
+.football-field {
+    background-color: #2ecc71;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.player {
+    width: 30px;
+    height: 30px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    transition: left 0.1s ease;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    transition: all 0.1s ease;
+}
+
+.goal {
+    width: 100px;
+    height: 60px;
+    border: 5px solid white;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.score {
+    color: #f1c40f;
+}
+
+.money-spent {
+    color: #e74c3c;
+}
+
+#startFootball, #buyPack {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+#startFootball {
+    background-color: var(--football-color);
+    color: white;
+}
+
+#startFootball:hover {
+    background-color: #219a52;
+}
+
+#buyPack {
+    background-color: #f39c12;
+    color: white;
+}
+
+#buyPack:hover {
+    background-color: #d68910;
+}
+
+/* Symulator Donosów */
+.snitch-simulator {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.snitch-simulator h2 {
+    color: var(--snitch-color);
+    margin-bottom: 1.5rem;
+}
+
+.snitch-scene {
+    background-color: #34495e;
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.police-station {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #7f8c8d;
+    border-top-left-radius: 10px;
+}
+
+.desk {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 100px;
+    height: 20px;
+    background-color: #95a5a6;
+    border-radius: 5px;
+}
+
+.police-officer {
+    width: 40px;
+    height: 60px;
+    background-color: #3498db;
+    position: absolute;
+    right: 70px;
+    bottom: 70px;
+    border-radius: 5px 5px 0 0;
+}
+
+.police-officer:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+}
+
+.slawomir-character {
+    width: 40px;
+    height: 60px;
+    background-color: #e74c3c;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    border-radius: 5px 5px 0 0;
+    transition: left 0.5s ease, bottom 0.5s ease;
+}
+
+.slawomir-character:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-color: #f39c12;
+    border-radius: 50%;
+}
+
+.snitch-target {
+    width: 30px;
+    height: 50px;
+    background-color: #2ecc71;
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    border-radius: 5px 5px 0 0;
+    transition: left 0.5s ease;
+}
+
+.snitch-target:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+}
+
+.snitch-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.snitch-count {
+    color: #e74c3c;
+}
+
+.drunk-level {
+    color: #f39c12;
+}
+
+#startSnitching, #drinkMore {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+#startSnitching {
+    background-color: var(--snitch-color);
+    color: white;
+}
+
+#startSnitching:hover {
+    background-color: #d35400;
+}
+
+#drinkMore {
+    background-color: #8e44ad;
+    color: white;
+}
+
+#drinkMore:hover {
+    background-color: #6c3483;
+}
+
+.snitch-log {
+    margin-top: 1rem;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.snitch-log h3 {
+    color: var(--snitch-color);
+    margin-bottom: 0.5rem;
+}
+
+#snitch-list {
+    list-style-type: none;
+}
+
+#snitch-list li {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #34495e;
+}
+
+.interactive-section {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+.crash-game {
+    text-align: center;
+}
+
+.game-container {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.multiplier {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#startGame {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#startGame:hover {
+    background-color: #27ae60;
+}
+
+#cashout {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#cashout:hover {
+    background-color: #c0392b;
+}
+
+#cashout:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.balance {
+    font-size: 1.2rem;
+    color: #f1c40f;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #7f8c8d;
+    border-top: 1px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .character-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .quotes-container {
+        grid-template-columns: 1fr;
+    }
+} 

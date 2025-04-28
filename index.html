@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodzina Kasprzaków - Historia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Rodzina Kasprzaków</h1>
+            <p class="subtitle">Historia pełna dramatów i uzależnień</p>
+        </header>
+
+        <main>
+            <section class="character-cards">
+                <div class="card" id="igor">
+                    <div class="card-content">
+                        <h2>Igor Kasprzak</h2>
+                        <div class="age">15 lat</div>
+                        <div class="characteristics">
+                            <span class="tag">Hazardzista</span>
+                            <span class="tag">Apple Fan</span>
+                            <span class="tag">Crash Game</span>
+                        </div>
+                        <p class="description">
+                            Młody chłopak uzależniony od hazardu i zafascynowany Apple. 
+                            Jego ulubiona gra to "Crash", a przegrane kończą się zniszczeniem sprzętu.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" id="wieslawa">
+                    <div class="card-content">
+                        <h2>Wiesława Kasprzak</h2>
+                        <div class="age">70 lat</div>
+                        <div class="characteristics">
+                            <span class="tag">Football Rivals</span>
+                            <span class="tag">Sponsor</span>
+                        </div>
+                        <p class="description">
+                            Babcia Igora, która nieświadomie wspiera jego uzależnienie od hazardu
+                            poprzez regularne przelewy. Sama wydaje fortunę na Football Rivals.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" id="monia">
+                    <div class="card-content">
+                        <h2>Monia Sz.</h2>
+                        <div class="age">~40 lat</div>
+                        <div class="characteristics">
+                            <span class="tag">Była narkomanka</span>
+                        </div>
+                        <p class="description">
+                            Matka Igora, która w przeszłości zmagała się z uzależnieniem od narkotyków.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card" id="slawomir">
+                    <div class="card-content">
+                        <h2>Sławomir Kasprzak</h2>
+                        <div class="characteristics">
+                            <span class="tag">Alkoholik</span>
+                            <span class="tag">Były narkoman</span>
+                            <span class="tag">Donosiciel</span>
+                        </div>
+                        <p class="description">
+                            Ojciec Igora, alkoholik i były narkoman. Jego sposób na problemy to
+                            donoszenie na innych na komendzie.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="quotes-section">
+                <h2>Cytaty dnia</h2>
+                <div class="quotes-container">
+                    <div class="quote-card" id="igor-quote">
+                        <div class="quote-content">
+                            <p class="quote-text">"Steve Jobs byłby dumny z mojego iPhone'a 14!"</p>
+                            <p class="quote-author">- Igor Kasprzak</p>
+                        </div>
+                    </div>
+                    <div class="quote-card" id="wieslawa-quote">
+                        <div class="quote-content">
+                            <p class="quote-text">"Igorze, weź jeszcze 500 zł na grę, babcia ma emeryturę!"</p>
+                            <p class="quote-author">- Wiesława Kasprzak</p>
+                        </div>
+                    </div>
+                    <div class="quote-card" id="monia-quote">
+                        <div class="quote-content">
+                            <p class="quote-text">"Kiedyś też byłam uzależniona, ale teraz jestem czysta... prawie."</p>
+                            <p class="quote-author">- Monia Sz.</p>
+                        </div>
+                    </div>
+                    <div class="quote-card" id="slawomir-quote">
+                        <div class="quote-content">
+                            <p class="quote-text">"Nie lubię go, idę na komendę go sprzedać!"</p>
+                            <p class="quote-author">- Sławomir Kasprzak</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="new-quotes">Nowe cytaty</button>
+            </section>
+
+            <section class="football-rivals">
+                <h2>Football Rivals - Gra Babci Wiesławy</h2>
+                <div class="game-container">
+                    <div class="football-field">
+                        <div class="player" id="player"></div>
+                        <div class="ball" id="ball"></div>
+                        <div class="goal" id="goal"></div>
+                    </div>
+                    <div class="game-stats">
+                        <div class="score">Wynik: <span id="score">0</span></div>
+                        <div class="money-spent">Wydane pieniądze: <span id="money-spent">0</span> PLN</div>
+                    </div>
+                    <div class="controls">
+                        <button id="startFootball">Start gry</button>
+                        <button id="buyPack">Kup paczkę (50 PLN)</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="snitch-simulator">
+                <h2>Symulator Donosów Sławomira</h2>
+                <div class="game-container">
+                    <div class="snitch-scene">
+                        <div class="police-station">
+                            <div class="police-officer" id="officer"></div>
+                            <div class="desk"></div>
+                        </div>
+                        <div class="slawomir-character" id="slawomir"></div>
+                        <div class="snitch-target" id="target"></div>
+                    </div>
+                    <div class="snitch-stats">
+                        <div class="snitch-count">Liczba donosów: <span id="snitch-count">0</span></div>
+                        <div class="drunk-level">Poziom upicia: <span id="drunk-level">0</span>/10</div>
+                    </div>
+                    <div class="controls">
+                        <button id="startSnitching">Donieś na kogoś</button>
+                        <button id="drinkMore">Wypij więcej</button>
+                    </div>
+                    <div class="snitch-log" id="snitch-log">
+                        <h3>Historia donosów:</h3>
+                        <ul id="snitch-list"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interactive-section">
+                <div class="crash-game">
+                    <h2>Symulator "Crash"</h2>
+                    <div class="game-container">
+                        <div class="multiplier">1.00x</div>
+                        <div class="controls">
+                            <button id="startGame">Start</button>
+                            <button id="cashout" disabled>Cashout</button>
+                        </div>
+                        <div class="balance">Saldo: 1000 PLN</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2024 Historia Rodziny Kasprzaków</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
